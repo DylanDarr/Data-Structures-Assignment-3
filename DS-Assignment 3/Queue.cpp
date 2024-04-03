@@ -7,13 +7,14 @@ template <typename D>
 void Queue<D>::push(D data) {
 
 	if (empty() == true) {
-		Node* newNode = new Node(data);
+		Node<D>* newNode = new Node<D>(data);
 		head = newNode;
 		tail = newNode;
 		queueCount++;
 	}
+
 	else {
-		Node* newNode = new Node(data);
+		Node<D>* newNode = new Node<D>(data);
 		tail->next = newNode;
 		tail = newNode;
 		tail->next = nullptr;
@@ -25,17 +26,20 @@ void Queue<D>::push(D data) {
 template <typename D>
 void Queue<D>::pop() {
 	if (empty() == false) {
+
 		if (head->next == nullptr) {
 			delete head;
 			queueCount--;
 		}
+
 		else {
-			Node* oldTop = head;
+			Node<D>* oldTop = head;
 			head = head->next;
 			delete oldTop;
 			queueCount--;
 		}
 	}
+
 	else
 		cout << endl << "Can not pop because queue is empty" << endl << endl;
 }
@@ -65,13 +69,17 @@ int Queue<D>::size() {
 template <typename D>
 void Queue<D>::printQueue() {
 	cout << endl;
+
 	if (empty() == false) {
-		Node* tempNode = head;
+
+		Node<D>* tempNode = head;
 		cout << head->data;
+
 		for (int i = 1; i < queueCount; i++) {
 			tempNode = tempNode->next;
 			cout << " -> " << tempNode->data;
 		}
+		
 		cout << endl << endl;
 	}
 }
@@ -79,8 +87,7 @@ void Queue<D>::printQueue() {
 template <typename D>
 void Queue<D>::move_to_rear() {
 
-	Node* frontNode = front();
-	push(frontNode);
+	push(front());
 	pop();
 
 }

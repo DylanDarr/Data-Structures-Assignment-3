@@ -1,2 +1,6 @@
 ﻿  Functions.cpp
+  Queue.cpp
+  main.cpp
+C:\Users\ddd2m\source\repos\Data-Structures-Assignment-3\DS-Assignment 3\main.cpp(30,110): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
   DS-Assignment 3.vcxproj -> C:\Users\ddd2m\source\repos\Data-Structures-Assignment-3\DS-Assignment 3\x64\Debug\DS-Assignment 3.exe

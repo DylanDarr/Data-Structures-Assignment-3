@@ -8,6 +8,7 @@ struct Node {
 	Node* next;
 	D data;
 
+	Node(int dataItem, Node* next_prt = nullptr) : data(dataItem), next(next_prt) {}
 };
 
 template <typename D>

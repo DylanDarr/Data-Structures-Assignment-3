@@ -16,8 +16,10 @@ List::List() {
 void List::print() {
 
 	for (auto i : list) {
-		cout << i << endl;
+		cout << i << ", ";
 	}
+
+	cout << endl;
 }
 
 size_t List::size() {

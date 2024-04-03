@@ -10,9 +10,18 @@ private:
 	vector<int> list;
 
 public:
+	//Constructor
 	List();
+
+	//Returns size of list
 	size_t size();
-	int linearSearch(int target, int pos_first);
+
+	//Uses a linear search algorithm to find the target from the given index
+	int linearSearch(int target, int pos_last);
+
+	//Sorts the list with the insertion sort algorithm
 	void insertionSort();
+
+	//Prints the list to console
 	void print();
 };
